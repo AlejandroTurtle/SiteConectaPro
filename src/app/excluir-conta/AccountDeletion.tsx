@@ -318,7 +318,7 @@ export function AccountDeletion() {
               Poderemos pedir uma verificação de identidade para proteger seus dados; nunca envie sua senha.
             </Typography>
           </Box>
-          <Stack direction="row" spacing={2} flexWrap="wrap" aria-label="Documentos legais">
+          <Stack direction="row" spacing={2} sx={{ flexWrap: 'wrap' }} aria-label="Documentos legais">
             <Link href="/termos-de-uso">Termos de Uso</Link>
             <Link href="/politica-de-privacidade">Política de Privacidade</Link>
           </Stack>
