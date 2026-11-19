@@ -6,120 +6,111 @@ import ArrowForwardRounded from '@mui/icons-material/ArrowForwardRounded';
 import BoltRounded from '@mui/icons-material/BoltRounded';
 import CalendarMonthRounded from '@mui/icons-material/CalendarMonthRounded';
 import CheckCircleRounded from '@mui/icons-material/CheckCircleRounded';
+import ChatBubbleOutlineRounded from '@mui/icons-material/ChatBubbleOutlineRounded';
 import HandshakeRounded from '@mui/icons-material/HandshakeRounded';
 import LocationOnRounded from '@mui/icons-material/LocationOnRounded';
 import SearchRounded from '@mui/icons-material/SearchRounded';
 import ShieldRounded from '@mui/icons-material/ShieldRounded';
 import StarRounded from '@mui/icons-material/StarRounded';
 import VerifiedUserRounded from '@mui/icons-material/VerifiedUserRounded';
+import WorkOutlineRounded from '@mui/icons-material/WorkOutlineRounded';
 import { ScrollEffects } from '@/components/ScrollEffects';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
-  title: 'ConectaPro | Encontre quem precisa do seu serviço',
+  title: 'ConectaPro | Profissionais e serviços perto de você',
   description:
-    'Encontre profissionais da sua região ou receba oportunidades compatíveis com os serviços que você oferece.',
+    'Encontre profissionais por serviço e região ou publique uma solicitação para receber contatos compatíveis. Conheça o ConectaPro.',
 };
-
-const categories = [
-  'Diaristas e faxineiras',
-  'Passadeiras',
-  'Jardineiros',
-  'Eletricistas',
-  'Encanadores',
-  'Pedreiros',
-  'Pintores',
-  'Montadores',
-  'Técnicos',
-  'Passeadores de cães',
-  'Manutenção',
-  'E outros serviços locais',
-];
 
 const customerSteps = [
   {
     number: '01',
-    title: 'Conte o que você precisa',
-    description: 'Escolha o serviço e informe local, data, horário e os detalhes importantes.',
+    title: 'Busque ou conte o que precisa',
+    description:
+      'Pesquise por serviço e região ou descreva sua necessidade com local, data e horário.',
   },
   {
     number: '02',
-    title: 'Encontre pessoas compatíveis',
-    description: 'Veja profissionais da sua região que atendem ao serviço e à sua disponibilidade.',
+    title: 'Conheça os perfis e interesses',
+    description:
+      'Veja serviços, experiência, área de atendimento, portfólio e avaliações disponíveis.',
   },
   {
     number: '03',
-    title: 'Converse e combine',
-    description: 'Compare perfis e negocie preço, prazo e execução diretamente com o profissional.',
+    title: 'Converse e combine diretamente',
+    description:
+      'Negocie valores, prazo e execução com o profissional antes de decidir.',
   },
 ];
 
 const professionalSteps = [
   {
     number: '01',
-    title: 'Monte seu perfil',
-    description: 'Cadastre seus serviços, experiência, portfólio, regiões e disponibilidade.',
+    title: 'Apresente seu trabalho',
+    description:
+      'Cadastre serviços, especialidades, experiência, área de atendimento, agenda e portfólio.',
   },
   {
     number: '02',
-    title: 'Receba oportunidades',
-    description: 'Pedidos compatíveis com o seu perfil aparecem para você avaliar com calma.',
+    title: 'Apareça para quem procura',
+    description:
+      'Clientes podem encontrar seu perfil por serviço, especialidade e região.',
   },
   {
     number: '03',
-    title: 'Escolha se quer conectar',
-    description: 'Veja as informações da oportunidade e desbloqueie o contato se fizer sentido.',
+    title: 'Avalie cada oportunidade',
+    description:
+      'Veja os detalhes e o custo em créditos antes de liberar o contato de uma solicitação.',
   },
 ];
 
-const matchingSignals = [
-  'Categoria e especialidade do serviço',
-  'Região de atendimento e distância',
+const matchingCriteria = [
+  'Serviço e especialidade solicitados',
+  'Região e distância de atendimento',
   'Data, horário e disponibilidade',
-  'Avaliações e taxa de resposta',
-  'Qualidade e completude do perfil',
-  'Atividade recente do profissional',
+  'Perfil, avaliações e atividade recente',
 ];
 
-const professionalBenefits = [
-  'Criar conta e perfil profissional',
-  'Cadastrar serviços e especialidades',
-  'Adicionar fotos e portfólio',
-  'Definir regiões de atendimento',
-  'Aparecer nas buscas',
-  'Receber e visualizar oportunidades',
+const serviceExamples = [
+  'Construção e reparos',
+  'Limpeza e organização',
+  'Beleza e bem-estar',
+  'Cuidados com pets',
+  'Tecnologia',
+  'Mudanças e fretes',
 ];
 
 const questions = [
   {
-    question: 'O ConectaPro cobra comissão sobre o serviço?',
+    question: 'Como encontro um profissional?',
     answer:
-      'Não. A plataforma aproxima cliente e profissional. Preço, prazo e execução são combinados diretamente entre as partes.',
+      'No app, você pode buscar por serviço, especialidade e região, comparar perfis públicos ou criar uma solicitação com os detalhes do que precisa.',
   },
   {
-    question: 'O profissional paga para visualizar uma oportunidade?',
+    question: 'O que acontece depois que publico uma solicitação?',
     answer:
-      'Não. Visualizar as informações da oportunidade é gratuito. Os créditos só são consumidos quando o profissional confirma o desbloqueio do contato.',
+      'A solicitação é comparada com profissionais elegíveis por serviço, região e disponibilidade. Os compatíveis recebem a oportunidade e podem decidir se querem liberar o contato.',
   },
   {
-    question: 'E se o cliente cancelar depois que eu desbloquear?',
+    question: 'Preciso usar créditos para pesquisar profissionais?',
     answer:
-      'Se a solicitação já tiver sido encerrada antes do desbloqueio ou houver um erro da plataforma, o crédito é devolvido. Um cancelamento depois de um contato válido faz parte do risco comercial.',
+      'A busca direta por perfis não consome créditos. Na jornada de oportunidades, o profissional vê o custo em créditos antes de confirmar a liberação do contato.',
   },
   {
-    question: 'Preciso pagar para me cadastrar como profissional?',
+    question: 'O ConectaPro cobra comissão pelo serviço?',
     answer:
-      'Não. Criar o perfil, cadastrar serviços, aparecer nas buscas e visualizar oportunidades é gratuito. Você compra créditos apenas quando quiser desbloquear um contato.',
+      'Não. O preço, o prazo e a forma de pagamento do serviço são combinados diretamente entre cliente e profissional. O ConectaPro não processa o pagamento do serviço.',
   },
   {
-    question: 'O ConectaPro garante que vou conseguir um cliente?',
+    question: 'A verificação garante a qualidade do serviço?',
     answer:
-      'Não. A plataforma busca entregar oportunidades compatíveis, ativas e válidas. A decisão de contratar é sempre do cliente.',
+      'Não. A análise de identidade é uma etapa de elegibilidade do perfil profissional. Ela não é garantia de qualidade, resultado ou contratação.',
   },
   {
-    question: 'Como funciona a seleção de profissionais?',
+    question: 'O ConectaPro garante que vou contratar ou conseguir clientes?',
     answer:
-      'O sistema considera categoria, região, distância, disponibilidade e status. Também leva em conta avaliações, resposta, qualidade do perfil e atividade recente, com distribuição equilibrada entre profissionais compatíveis.',
+      'Não. A plataforma aproxima pessoas e organiza oportunidades, mas a disponibilidade, a negociação e a contratação dependem das partes.',
   },
 ];
 
@@ -132,11 +123,13 @@ function Brand({ light = false }: { light?: boolean }) {
   );
 }
 
-function ArrowLink({ href, children, secondary = false }: {
+interface ArrowLinkProps {
   href: string;
   children: ReactNode;
   secondary?: boolean;
-}) {
+}
+
+function ArrowLink({ href, children, secondary = false }: ArrowLinkProps) {
   return (
     <a className={`${styles.button} ${secondary ? styles.buttonSecondary : ''}`} href={href}>
       {children}<ArrowForwardRounded aria-hidden="true" />
@@ -150,7 +143,7 @@ export default function HomePage() {
       <ScrollEffects />
       <header id="topo" className={styles.header}>
         <div className={styles.headerInner}>
-          <Link href="/" aria-label="ConectaPro, início" className={styles.brandLink}>
+          <Link href="/" aria-label="ConectaPro, página inicial" className={styles.brandLink}>
             <Brand />
           </Link>
           <nav className={styles.nav} aria-label="Navegação principal">
@@ -160,8 +153,10 @@ export default function HomePage() {
             <a href="#seguranca">Segurança</a>
           </nav>
           <div className={styles.headerActions}>
-            <Link href="https://painel.conectapro.celemora.com.br/login" className={styles.adminLink}>Acesso admin</Link>
-            <a className={styles.headerCta} href="#como-funciona">Conheça a plataforma</a>
+            <Link href="https://painel.conectapro.celemora.com.br/login" className={styles.adminLink}>
+              Acesso administrativo
+            </Link>
+            <a className={styles.headerCta} href="#como-funciona">Conheça o app</a>
           </div>
         </div>
       </header>
@@ -170,296 +165,217 @@ export default function HomePage() {
         <section className={styles.hero}>
           <div className={`${styles.container} ${styles.heroGrid}`}>
             <div className={styles.heroCopy} data-reveal="left">
-              <div className={styles.eyebrow}><span className={styles.eyebrowDot} /> CONECTANDO QUEM PRECISA A QUEM FAZ</div>
-              <h1>Encontre quem precisa do <span>seu serviço.</span></h1>
+              <div className={styles.eyebrow}>
+                <span className={styles.eyebrowDot} /> SERVIÇOS LOCAIS, CONEXÕES DIRETAS
+              </div>
+              <h1>Um serviço para resolver. <span>Um profissional para encontrar.</span></h1>
               <p className={styles.heroLead}>
-                O ConectaPro aproxima clientes e profissionais da mesma região. Você explica o que precisa ou mostra o que sabe fazer — e a conexão começa por aí.
+                Busque perfis por serviço e região ou conte o que precisa para receber o interesse de profissionais compatíveis. A conversa e a negociação acontecem entre vocês.
               </p>
               <div className={styles.heroActions}>
-                <ArrowLink href="#para-clientes">Quero contratar um profissional</ArrowLink>
-                <ArrowLink href="#para-profissionais" secondary>Sou profissional</ArrowLink>
+                <ArrowLink href="#para-clientes">Preciso de um serviço</ArrowLink>
+                <ArrowLink href="#para-profissionais" secondary>Ofereço serviços</ArrowLink>
               </div>
               <div className={styles.heroNotes}>
-                <span><CheckCircleRounded aria-hidden="true" /> Negociação direta</span>
+                <span><CheckCircleRounded aria-hidden="true" /> Busca direta sem créditos</span>
                 <span><CheckCircleRounded aria-hidden="true" /> Sem comissão sobre o serviço</span>
               </div>
             </div>
 
-            <div className={styles.heroVisual} data-reveal="right" aria-label="Exemplo de conexão entre cliente e profissional">
-              <div className={styles.heroOrb} data-parallax="0.1" />
-              <div className={styles.heroPhotoWrap} data-parallax="0.045">
+            <div className={styles.heroVisual} data-reveal="right" aria-label="Ilustração de uma profissional e uma oportunidade local">
+              <div className={styles.heroOrb} data-parallax="0.08" />
+              <div className={styles.heroPhotoWrap} data-parallax="0.035">
                 <Image
                   className={styles.heroPhoto}
                   src="/conecta-professional.png"
-                  alt="Profissional sorrindo, pronta para atender novos clientes"
+                  alt="Profissional de serviços locais"
                   width={340}
                   height={340}
                   priority
                 />
                 <div className={styles.photoCaption}>
-                  <span className={styles.captionIcon}><VerifiedUserRounded aria-hidden="true" /></span>
-                  <span><strong>Seu trabalho merece ser encontrado</strong><small>Um perfil para mostrar o que você faz</small></span>
+                  <span className={styles.captionIcon}><WorkOutlineRounded aria-hidden="true" /></span>
+                  <span><strong>Um perfil que mostra seu trabalho</strong><small>Serviços, região e portfólio</small></span>
                 </div>
               </div>
               <div className={`${styles.floatingCard} ${styles.opportunityCard}`}>
                 <div className={styles.floatingIcon}><BoltRounded aria-hidden="true" /></div>
-                <div><small>OPORTUNIDADE COMPATÍVEL</small><strong>Serviço na sua região</strong><span><LocationOnRounded aria-hidden="true" /> Distância aproximada</span></div>
+                <div>
+                  <small>EXEMPLO DE OPORTUNIDADE</small>
+                  <strong>Instalação elétrica</strong>
+                  <span><LocationOnRounded aria-hidden="true" /> Região de atendimento</span>
+                </div>
               </div>
               <div className={`${styles.floatingCard} ${styles.requestCard}`}>
                 <span className={styles.requestIcon}><SearchRounded aria-hidden="true" /></span>
-                <span><small>CLIENTE PROCURANDO</small><strong>Um profissional como você</strong></span>
+                <span><small>BUSCA DIRETA</small><strong>Compare perfis e serviços</strong></span>
                 <span className={styles.requestArrow}><ArrowForwardRounded aria-hidden="true" /></span>
               </div>
-              <div className={styles.visualFootnote}><span /> Feito para serviços locais, de verdade.</div>
+              <div className={styles.visualFootnote}><span /> A contratação é combinada diretamente.</div>
             </div>
           </div>
           <div className={styles.heroBottomLine} />
         </section>
 
-        <section className={styles.trustStrip} aria-label="Como o ConectaPro funciona">
+        <section className={styles.trustStrip} aria-label="Características do ConectaPro">
           <div className={`${styles.container} ${styles.trustInner}`}>
-            <span>Uma plataforma para aproximar</span>
-            <div data-reveal="up" data-reveal-delay="1"><SearchRounded aria-hidden="true" /><strong>Busca local</strong><small>por categoria e região</small></div>
-            <div data-reveal="up" data-reveal-delay="2"><HandshakeRounded aria-hidden="true" /><strong>Conexão direta</strong><small>sem comissão</small></div>
-            <div data-reveal="up" data-reveal-delay="3"><ShieldRounded aria-hidden="true" /><strong>Mais clareza</strong><small>antes de desbloquear</small></div>
+            <span><SearchRounded aria-hidden="true" /> Busca por serviço e região</span>
+            <span><CalendarMonthRounded aria-hidden="true" /> Oportunidades com data e horário</span>
+            <span><ChatBubbleOutlineRounded aria-hidden="true" /> Conversa entre as partes</span>
+            <span><ShieldRounded aria-hidden="true" /> Dados pessoais fora da busca pública</span>
           </div>
         </section>
 
-        <section className={`${styles.section} ${styles.howSection}`} id="como-funciona">
+        <section className={`${styles.section} ${styles.flowSection}`} id="como-funciona">
           <div className={styles.container}>
             <div className={styles.sectionHeading} data-reveal="up">
-              <span className={styles.kicker}>SIMPLES PARA OS DOIS LADOS</span>
-              <h2>Uma conexão melhor começa com <em>informação clara.</em></h2>
-              <p>Clientes encontram opções. Profissionais escolhem oportunidades que combinam com seu trabalho.</p>
+              <span className={styles.kicker}>DO PRIMEIRO PASSO À CONVERSA</span>
+              <h2>Uma plataforma. <em>Dois caminhos para se conectar.</em></h2>
+              <p>Cliente e profissional usam o ConectaPro pelo app, cada um com ferramentas para encontrar uma combinação que faça sentido.</p>
             </div>
-            <div className={styles.stepsGrid}>
-              <article className={`${styles.stepPanel} ${styles.customerPanel}`} data-reveal="up" data-reveal-delay="1">
-                <div className={styles.panelHeading}><span className={styles.panelIcon}><SearchRounded aria-hidden="true" /></span><div><small>PARA QUEM PRECISA</small><h3>Encontre o profissional certo</h3></div></div>
+            <div className={styles.flowGrid}>
+              <article className={`${styles.flowCard} ${styles.clientFlowCard}`} id="para-clientes" data-reveal="up">
+                <div className={styles.flowCardHeader}>
+                  <span className={styles.flowIcon}><SearchRounded aria-hidden="true" /></span>
+                  <span className={styles.flowLabel}>PARA CLIENTES</span>
+                </div>
+                <h3>Encontre alguém para o que você precisa.</h3>
                 <div className={styles.stepList}>
                   {customerSteps.map((step) => (
                     <div className={styles.step} key={step.number}>
-                      <span className={styles.stepNumber}>{step.number}</span>
-                      <div><h4>{step.title}</h4><p>{step.description}</p></div>
+                      <span>{step.number}</span>
+                      <div><strong>{step.title}</strong><p>{step.description}</p></div>
                     </div>
                   ))}
                 </div>
-                <a className={styles.textLink} href="#para-clientes">Conheça a experiência do cliente <ArrowForwardRounded aria-hidden="true" /></a>
+                <a href="#buscar-profissionais" className={styles.textLink}>Conheça as opções para clientes <ArrowForwardRounded aria-hidden="true" /></a>
               </article>
-              <article className={`${styles.stepPanel} ${styles.professionalPanel}`} data-reveal="up" data-reveal-delay="2">
-                <div className={styles.panelHeading}><span className={`${styles.panelIcon} ${styles.panelIconGold}`}><BoltRounded aria-hidden="true" /></span><div><small>PARA QUEM OFERECE</small><h3>Receba pedidos compatíveis</h3></div></div>
+
+              <article className={`${styles.flowCard} ${styles.proFlowCard}`} id="para-profissionais" data-reveal="up" data-reveal-delay="1">
+                <div className={styles.flowCardHeader}>
+                  <span className={styles.flowIcon}><WorkOutlineRounded aria-hidden="true" /></span>
+                  <span className={styles.flowLabel}>PARA PROFISSIONAIS</span>
+                </div>
+                <h3>Mostre seu trabalho a quem está procurando.</h3>
                 <div className={styles.stepList}>
                   {professionalSteps.map((step) => (
                     <div className={styles.step} key={step.number}>
-                      <span className={styles.stepNumber}>{step.number}</span>
-                      <div><h4>{step.title}</h4><p>{step.description}</p></div>
+                      <span>{step.number}</span>
+                      <div><strong>{step.title}</strong><p>{step.description}</p></div>
                     </div>
                   ))}
                 </div>
-                <a className={styles.textLink} href="#para-profissionais">Veja como funciona para profissionais <ArrowForwardRounded aria-hidden="true" /></a>
+                <a href="#perfil-profissional" className={styles.textLink}>Veja como funciona para profissionais <ArrowForwardRounded aria-hidden="true" /></a>
               </article>
             </div>
           </div>
         </section>
 
-        <section className={styles.categoryBand}>
-          <div className={`${styles.container} ${styles.categoryLayout}`}>
-            <div className={styles.categoryIntro}>
-              <span className={styles.kicker}>SERVIÇOS DA SUA REGIÃO</span>
-              <h2>Tem muita coisa boa que pode ser <em>encontrada.</em></h2>
-              <p>De pequenos reparos aos cuidados do dia a dia, descubra profissionais locais para diferentes necessidades.</p>
+        <section className={`${styles.section} ${styles.discoverySection}`} id="buscar-profissionais">
+          <div className={`${styles.container} ${styles.discoveryGrid}`}>
+            <div className={styles.discoveryCopy} data-reveal="left">
+              <span className={styles.kicker}>PARA QUEM JÁ SABE O QUE PROCURA</span>
+              <h2>Pesquise profissionais do seu jeito.</h2>
+              <p>Filtre por serviço, especialidade, cidade, faixa de preço e disponibilidade. Abra os perfis para conhecer melhor a experiência de cada profissional.</p>
+              <ul className={styles.checkList}>
+                <li><CheckCircleRounded aria-hidden="true" /> Veja serviços e especialidades cadastrados</li>
+                <li><CheckCircleRounded aria-hidden="true" /> Compare preço informado e área de atendimento</li>
+                <li><CheckCircleRounded aria-hidden="true" /> Consulte portfólio e avaliações quando disponíveis</li>
+                <li><CheckCircleRounded aria-hidden="true" /> Inicie uma conversa sem consumir créditos</li>
+              </ul>
             </div>
-            <div className={styles.categoryGrid}>
-              {categories.map((category, index) => (
-                <span className={styles.categoryPill} key={category} data-reveal="up" data-reveal-delay={index % 5}>
-                  <span className={styles.categoryDot}>{index < 4 ? '✳' : '·'}</span>{category}
-                </span>
-              ))}
+            <div className={styles.searchMock} data-reveal="right" aria-label="Exemplo ilustrativo de filtros de busca">
+              <div className={styles.mockTopbar}><span /><span /><span /><small>BUSCAR PROFISSIONAIS</small></div>
+              <div className={styles.mockSearchField}><SearchRounded aria-hidden="true" /><span>O que você precisa?</span><b>Buscar</b></div>
+              <div className={styles.mockFilters}><span>Serviço <b>Elétrica</b></span><span>Região <b>Sua cidade</b></span><span>Agenda <b>Ver opções</b></span></div>
+              <div className={styles.mockResultLabel}>PERFIS QUE ATENDEM AOS FILTROS</div>
+              <div className={styles.mockProfile}>
+                <span className={styles.mockAvatar}><WorkOutlineRounded aria-hidden="true" /></span>
+                <div className={styles.mockProfileCopy}><strong>Perfil profissional</strong><span>Serviços · experiência · região</span><small><StarRounded aria-hidden="true" /> Avaliações exibidas no perfil</small></div>
+                <ArrowForwardRounded className={styles.mockArrow} aria-hidden="true" />
+              </div>
+              <div className={styles.mockPrivacy}><ShieldRounded aria-hidden="true" /><span>Endereço completo e telefone não aparecem na busca pública.</span></div>
+              <p className={styles.mockCaption}>Exemplo ilustrativo da busca no aplicativo.</p>
             </div>
           </div>
         </section>
 
-        <section className={`${styles.section} ${styles.discoverySection}`}>
-          <div className={styles.container}>
-            <div className={styles.sectionHeading} data-reveal="up">
-              <span className={styles.kicker}>DO SEU JEITO</span>
-              <h2>Você procura. Ou deixa o ConectaPro <em>encontrar.</em></h2>
+        <section className={styles.professionalSection} id="perfil-profissional">
+          <div className={`${styles.container} ${styles.professionalGrid}`}>
+            <div className={styles.professionalIntro} data-reveal="left">
+              <span className={styles.kicker}>PARA QUEM PRESTA SERVIÇOS</span>
+              <h2>Seu perfil reúne o que o cliente precisa conhecer.</h2>
+              <p>Organize suas informações uma vez e deixe claro quais serviços você oferece, onde atende e quando tem disponibilidade.</p>
+              <div className={styles.profileFacts}>
+                <span><CheckCircleRounded aria-hidden="true" /> Serviços e especialidades</span>
+                <span><CheckCircleRounded aria-hidden="true" /> Área e agenda de atendimento</span>
+                <span><CheckCircleRounded aria-hidden="true" /> Experiência, preço e portfólio</span>
+              </div>
+              <div className={styles.verificationNote}>
+                <VerifiedUserRounded aria-hidden="true" />
+                <p><strong>Análise de identidade para perfis profissionais.</strong> A aprovação é necessária para aparecer na busca pública e não representa garantia de qualidade ou contratação.</p>
+              </div>
             </div>
-            <div className={styles.discoveryGrid}>
-              <article className={styles.discoveryCard} data-reveal="up" data-reveal-delay="1">
-                <div className={styles.discoveryIcon}><SearchRounded aria-hidden="true" /></div>
-                <div className={styles.discoveryBody}>
-                  <span className={styles.cardLabel}>BUSCA DIRETA</span>
-                  <h3>Compare profissionais</h3>
-                  <p>Pesquise por categoria, cidade, bairro, distância, disponibilidade, avaliações e faixa de preço. Veja perfis e portfólios antes de conversar.</p>
-                  <div className={styles.miniFilters}><span>Categoria</span><span>Região</span><span>Disponibilidade</span></div>
+            <div className={styles.profileVisual} data-reveal="right">
+              <div className={styles.profileVisualGlow} />
+              <div className={styles.profileCard}>
+                <div className={styles.profileCardTop}><span>PERFIL PROFISSIONAL</span><VerifiedUserRounded aria-label="Identidade analisada" /></div>
+                <div className={styles.profileCardPerson}>
+                  <Image src="/conecta-professional.png" alt="Exemplo visual de perfil profissional" width={78} height={78} />
+                  <div><strong>Seu nome profissional</strong><span>Área de atendimento</span><small>Perfil demonstrativo</small></div>
                 </div>
-                <a className={styles.cardLink} href="#para-clientes" aria-label="Saiba mais sobre buscar profissionais"><ArrowForwardRounded aria-hidden="true" /></a>
-              </article>
-              <article className={`${styles.discoveryCard} ${styles.discoveryCardAccent}`} data-reveal="up" data-reveal-delay="2">
-                <div className={`${styles.discoveryIcon} ${styles.discoveryIconAccent}`}><BoltRounded aria-hidden="true" /></div>
-                <div className={styles.discoveryBody}>
-                  <span className={styles.cardLabel}>ENCONTRE PARA MIM</span>
-                  <h3>Explique em uma frase</h3>
-                  <p>“Preciso de uma diarista sexta-feira de manhã no Centro.” A necessidade vira um pedido organizado para encontrar quem está disponível.</p>
-                  <div className={styles.sampleRequest}><span>“Preciso de ajuda com...”</span><ArrowForwardRounded aria-hidden="true" /></div>
-                </div>
-                <a className={styles.cardLink} href="#para-clientes" aria-label="Saiba mais sobre encontrar um profissional"><ArrowForwardRounded aria-hidden="true" /></a>
-              </article>
+                <div className={styles.profileCardDivider} />
+                <div className={styles.profileCardServices}><span>SEUS SERVIÇOS</span><div>{serviceExamples.slice(0, 3).map((service) => <b key={service}>{service}</b>)}</div></div>
+                <div className={styles.profileCardBottom}><span><CalendarMonthRounded aria-hidden="true" /> Agenda informada</span><span><StarRounded aria-hidden="true" /> Avaliações disponíveis</span></div>
+              </div>
+              <div className={styles.portfolioNote}><span><WorkOutlineRounded aria-hidden="true" /></span><div><strong>Portfólio</strong><small>Imagens aprovadas no perfil público</small></div></div>
             </div>
+          </div>
+          <div className={`${styles.container} ${styles.serviceExamples}`} aria-label="Exemplos de áreas de serviço">
+            <span>ALGUMAS ÁREAS DO CATÁLOGO</span>
+            <div>{serviceExamples.map((service) => <b key={service}>{service}</b>)}<b>E outras categorias</b></div>
           </div>
         </section>
 
-        <section className={styles.matchingSection}>
+        <section className={`${styles.section} ${styles.matchingSection}`} id="oportunidades">
           <div className={`${styles.container} ${styles.matchingGrid}`}>
             <div className={styles.matchingCopy} data-reveal="left">
-              <span className={styles.kicker}>COMPATIBILIDADE EM PRIMEIRO LUGAR</span>
-              <h2>Oportunidades que fazem sentido para <em>cada profissional.</em></h2>
-              <p>O sistema cruza os detalhes do pedido com o perfil de quem atende. A ordem considera compatibilidade e distribuição justa entre profissionais qualificados.</p>
-              <div className={styles.matchingNote}><span><CheckCircleRounded aria-hidden="true" /></span><p>O resultado não é “quem paga mais aparece primeiro”. É quem tem mais aderência àquela oportunidade.</p></div>
+              <span className={styles.kicker}>ENCONTRAR PARA MIM</span>
+              <h2>Descreva o serviço. O app procura combinações compatíveis.</h2>
+              <p>Ao publicar uma solicitação, o ConectaPro considera a categoria, a região e a disponibilidade para avisar profissionais que podem atender.</p>
+              <div className={styles.matchingNote}><span><ShieldRounded aria-hidden="true" /></span><p><strong>Seus dados de contato ficam protegidos.</strong><br />O contato só é liberado quando o profissional confirma o desbloqueio.</p></div>
             </div>
-            <div className={styles.matchingList}>
-              {matchingSignals.map((signal, index) => (
-                <div className={styles.matchingItem} key={signal} data-reveal="up" data-reveal-delay={index % 4}><span>0{index + 1}</span><strong>{signal}</strong><CheckCircleRounded aria-hidden="true" /></div>
-              ))}
-              <div className={styles.distributionNote}><span className={styles.distributionIcon}><CalendarMonthRounded aria-hidden="true" /></span><p><strong>Distribuição equilibrada</strong><br />Quantidade de pedidos recebidos, resposta, atividade e disponibilidade também entram na conta.</p></div>
-            </div>
-          </div>
-        </section>
-
-        <section className={`${styles.section} ${styles.audienceSection}`} id="para-clientes">
-          <div className={`${styles.container} ${styles.audienceGrid}`}>
-            <div className={styles.audienceCopy} data-reveal="left">
-              <span className={styles.kicker}>PARA CLIENTES</span>
-              <h2>Resolva o que precisa com <em>menos procura.</em></h2>
-              <p>Encontre profissionais que atendem sua necessidade e sua região. Compare experiência, portfólio e avaliações antes de conversar.</p>
-              <ul className={styles.checkList}>
-                <li><CheckCircleRounded aria-hidden="true" /> Pesquise ou descreva o serviço</li>
-                <li><CheckCircleRounded aria-hidden="true" /> Veja perfis compatíveis perto de você</li>
-                <li><CheckCircleRounded aria-hidden="true" /> Combine tudo diretamente</li>
-                <li><CheckCircleRounded aria-hidden="true" /> Sem comissão sobre o serviço</li>
-              </ul>
-              <ArrowLink href="#como-funciona">Veja como contratar</ArrowLink>
-            </div>
-            <div className={styles.customerVisual} data-reveal="right">
-              <div className={styles.visualGridPattern} />
-              <div className={styles.customerQuoteCard}>
-              <div className={styles.quoteTop}><span className={styles.quoteAvatar}>M</span><span><strong>Uma busca, várias opções</strong><small>Escolha com mais contexto</small></span><span className={styles.quoteTag}>PERFIL</span></div>
-                <div className={styles.quoteDivider} />
-                <div className={styles.quoteService}><span className={styles.serviceIcon}><SearchRounded aria-hidden="true" /></span><span><small>SERVIÇO</small><strong>Profissional para sua necessidade</strong></span><ArrowForwardRounded aria-hidden="true" /></div>
-                <div className={styles.quoteService}><span className={`${styles.serviceIcon} ${styles.serviceIconGold}`}><LocationOnRounded aria-hidden="true" /></span><span><small>LOCAL</small><strong>Sua região, com endereço protegido</strong></span><ShieldRounded aria-hidden="true" /></div>
+            <div className={styles.matchingPanel} data-reveal="right">
+              <div className={styles.matchingPanelHeader}><span><BoltRounded aria-hidden="true" /></span><div><small>COMBINAÇÕES DA SOLICITAÇÃO</small><strong>O que entra na análise</strong></div></div>
+              <div className={styles.matchingList}>
+                {matchingCriteria.map((criterion, index) => (
+                  <div className={styles.matchingItem} key={criterion}><span>0{index + 1}</span><strong>{criterion}</strong><CheckCircleRounded aria-hidden="true" /></div>
+                ))}
               </div>
-              <div className={styles.customerVisualCaption}><span>01</span><strong>Mais clareza para escolher.</strong></div>
+              <div className={styles.creditNotice}><span><BoltRounded aria-hidden="true" /></span><p><strong>O profissional decide se quer liberar.</strong><br />O custo em créditos aparece antes da confirmação. A busca direta de perfis não usa créditos.</p></div>
             </div>
           </div>
         </section>
 
-        <section className={styles.proSection} id="para-profissionais">
-          <div className={`${styles.container} ${styles.proLayout}`}>
-            <div className={styles.proIntro} data-reveal="left">
-              <span className={styles.kicker}>PARA PROFISSIONAIS</span>
-              <h2>Seu trabalho merece chegar a mais pessoas.</h2>
-              <p>Cadastre seu perfil uma vez e receba pedidos compatíveis com seus serviços, região e disponibilidade. Sem caçar cliente em grupo de mensagem.</p>
-              <div className={styles.proTrust}><ShieldRounded aria-hidden="true" /><span><strong>Você escolhe se quer desbloquear.</strong><small>Veja as informações e o custo antes de confirmar.</small></span></div>
+        <section className={styles.connectionSection} id="seguranca">
+          <div className={`${styles.container} ${styles.connectionLayout}`}>
+            <div className={styles.connectionIntro} data-reveal="left">
+              <span className={styles.kicker}>UMA CONEXÃO COM REGRAS CLARAS</span>
+              <h2>O ConectaPro aproxima. A decisão fica com vocês.</h2>
+              <p>A plataforma ajuda a encontrar perfis e organizar solicitações. O serviço, o pagamento e os termos da contratação são tratados diretamente entre cliente e profissional.</p>
             </div>
-            <div className={styles.proPlanCard} data-reveal="right">
-              <div className={styles.planHeader}><div><span className={styles.planEyebrow}>COMECE SEM CUSTO</span><h3>Plano gratuito</h3></div><span className={styles.planBadge}>R$ 0</span></div>
-              <p className={styles.planDescription}>Crie seu perfil e comece a aparecer para clientes da sua região.</p>
-              <ul className={styles.planBenefits}>
-                {professionalBenefits.map((benefit) => <li key={benefit}><CheckCircleRounded aria-hidden="true" />{benefit}</li>)}
-              </ul>
-              <div className={styles.creditBlock}>
-                <div className={styles.creditTitle}><span><BoltRounded aria-hidden="true" /></span><div><strong>Créditos para desbloquear contatos</strong><small>Você só compra quando quiser falar com o cliente.</small></div></div>
-                <div className={styles.priceGrid}>
-                  <div><strong>10</strong><span>créditos</span><b>R$ 19,90</b></div>
-                  <div className={styles.priceFeatured}><strong>30</strong><span>créditos</span><b>R$ 49,90</b></div>
-                  <div><strong>60</strong><span>créditos</span><b>R$ 89,90</b></div>
-                </div>
-                <p className={styles.priceFootnote}>Valores iniciais, sujeitos a ajuste conforme validação de mercado.</p>
-              </div>
-              <div className={styles.creditRules}>
-                <p><CheckCircleRounded aria-hidden="true" /> Ver oportunidades é gratuito.</p>
-                <p><CheckCircleRounded aria-hidden="true" /> O custo varia de 1 a 4 créditos conforme o pedido.</p>
-                <p><CheckCircleRounded aria-hidden="true" /> O valor aparece antes da confirmação.</p>
-              </div>
-              <a href="#protecao" className={styles.planLink}>Entenda a proteção dos créditos <ArrowForwardRounded aria-hidden="true" /></a>
+            <div className={styles.connectionCards}>
+              <article data-reveal="up"><span><LocationOnRounded aria-hidden="true" /></span><h3>Localização protegida</h3><p>A busca pública mostra a área de atendimento, sem expor o endereço completo do cliente.</p></article>
+              <article data-reveal="up" data-reveal-delay="1"><span><ChatBubbleOutlineRounded aria-hidden="true" /></span><h3>Conversa entre as partes</h3><p>Use a conversa vinculada à busca ou à solicitação para combinar os próximos passos.</p></article>
+              <article data-reveal="up" data-reveal-delay="2"><span><HandshakeRounded aria-hidden="true" /></span><h3>Negociação direta</h3><p>Preço, prazo, execução e pagamento do serviço são combinados fora da intermediação da plataforma.</p></article>
             </div>
           </div>
         </section>
 
-        <section className={`${styles.section} ${styles.protectionSection}`} id="protecao">
-          <div className={styles.container}>
-            <div className={styles.sectionHeading} data-reveal="up">
-              <span className={styles.kicker}>REGRAS CLARAS</span>
-              <h2>Seu crédito tem uma política de proteção <em>transparente.</em></h2>
-              <p>Crédito volta quando o problema está na oportunidade ou na plataforma. Contato válido não garante contratação.</p>
-            </div>
-            <div className={styles.refundGrid}>
-              <article className={`${styles.refundCard} ${styles.refundYes}`} data-reveal="up" data-reveal-delay="1">
-                <div className={styles.refundHeading}><span><CheckCircleRounded aria-hidden="true" /></span><div><small>CRÉDITO DEVOLVIDO</small><h3>Quando há problema na conexão</h3></div></div>
-                <ul>
-                  <li>Telefone inválido ou contato inexistente</li>
-                  <li>Solicitação duplicada, encerrada ou cancelada antes do desbloqueio</li>
-                  <li>Erro de categorização ou liberação incorreta pela plataforma</li>
-                  <li>Fraude comprovada ou dados essenciais inválidos</li>
-                </ul>
-              </article>
-              <article className={`${styles.refundCard} ${styles.refundNo}`} data-reveal="up" data-reveal-delay="2">
-                <div className={styles.refundHeading}><span><HandshakeRounded aria-hidden="true" /></span><div><small>CRÉDITO NÃO DEVOLVIDO</small><h3>Quando o contato é válido</h3></div></div>
-                <ul>
-                  <li>O cliente escolheu outro profissional ou desistiu</li>
-                  <li>As partes não chegaram a um acordo de preço</li>
-                  <li>O profissional não tinha disponibilidade</li>
-                  <li>A conversa aconteceu, mas o serviço não foi fechado</li>
-                </ul>
-              </article>
-            </div>
-            <p className={styles.refundFootnote}>A plataforma entrega uma oportunidade de conexão — não uma garantia de contratação.</p>
-          </div>
-        </section>
-
-        <section className={styles.securitySection} id="seguranca">
-          <div className={`${styles.container} ${styles.securityLayout}`}>
-            <div className={styles.securityCopy} data-reveal="left">
-              <span className={styles.kicker}>CONFIANÇA EM CADA CONEXÃO</span>
-              <h2>Mais segurança para conversar e escolher.</h2>
-              <p>Ferramentas e critérios para proteger a privacidade do cliente e manter as oportunidades mais confiáveis.</p>
-              <a className={styles.textLink} href="#reputacao">Como funciona a reputação <ArrowForwardRounded aria-hidden="true" /></a>
-            </div>
-            <div className={styles.securityFeatures}>
-              <div data-reveal="up" data-reveal-delay="1"><span><VerifiedUserRounded aria-hidden="true" /></span><strong>Dados validados</strong><p>Telefone, e-mail e status da solicitação conferidos antes do envio.</p></div>
-              <div data-reveal="up" data-reveal-delay="2"><span><ShieldRounded aria-hidden="true" /></span><strong>Privacidade preservada</strong><p>O endereço exato do cliente não fica exposto publicamente.</p></div>
-              <div data-reveal="up" data-reveal-delay="1"><span><HandshakeRounded aria-hidden="true" /></span><strong>Menos contatos em excesso</strong><p>Um limite de profissionais por oportunidade reduz abordagens repetidas.</p></div>
-              <div data-reveal="up" data-reveal-delay="2"><span><CheckCircleRounded aria-hidden="true" /></span><strong>Proteção contra abuso</strong><p>Medidas contra pedidos duplicados, contas falsas e atividade automatizada.</p></div>
-            </div>
-          </div>
-        </section>
-
-        <section className={`${styles.section} ${styles.reputationSection}`} id="reputacao">
-          <div className={`${styles.container} ${styles.reputationLayout}`}>
-            <div data-reveal="left">
-              <span className={styles.kicker}>REPUTAÇÃO CONSTRUÍDA NA PRÁTICA</span>
-              <h2>Boas conexões também deixam <em>história.</em></h2>
-              <p>Depois de uma conexão, cliente e profissional podem avaliar comunicação, pontualidade, profissionalismo e qualidade do serviço.</p>
-            </div>
-            <div className={styles.rankingCard} data-reveal="right">
-              <div className={styles.rankingHeading}><span className={styles.rankingStar}><StarRounded aria-hidden="true" /></span><div><strong>O que ajuda a compor o ranking</strong><small>Compatibilidade para cada solicitação</small></div></div>
-              <div className={styles.rankingTags}><span>Compatibilidade</span><span>Distância</span><span>Disponibilidade</span><span>Avaliações</span><span>Taxa de resposta</span><span>Qualidade do perfil</span><span>Atividade recente</span></div>
-              <p><strong>Destaques pagos, quando disponíveis, serão identificados como publicidade.</strong> Eles não garantem contratação ou posição orgânica no ranking.</p>
-            </div>
-          </div>
-        </section>
-
-        <section className={styles.transparencySection}>
-          <div className={`${styles.container} ${styles.transparencyLayout}`}>
-            <div className={styles.transparencyIntro} data-reveal="left"><span className={styles.kicker}>SEM SURPRESAS</span><h2>O que o ConectaPro faz — e o que fica entre vocês.</h2></div>
-            <div className={styles.transparencyCard} data-reveal="right">
-              <div><span className={styles.transparencyCheck}><CheckCircleRounded aria-hidden="true" /></span><strong>Conecta cliente e profissional</strong></div>
-              <div><span className={styles.transparencyCheck}><CheckCircleRounded aria-hidden="true" /></span><strong>Ajuda a encontrar oportunidades compatíveis</strong></div>
-              <div><span className={styles.transparencyCross}>×</span><strong>Não define o preço nem recebe pelo serviço</strong></div>
-              <div><span className={styles.transparencyCross}>×</span><strong>Não cobra comissão nem garante contratação</strong></div>
-              <div><span className={styles.transparencyCross}>×</span><strong>Não participa da execução nem cria vínculo de emprego</strong></div>
-              <p>O ConectaPro é a infraestrutura de conexão. A negociação é sempre direta entre cliente e profissional.</p>
-            </div>
+        <section className={`${styles.section} ${styles.reviewSection}`}>
+          <div className={`${styles.container} ${styles.reviewGrid}`}>
+            <div className={styles.reviewMark} data-reveal="left"><StarRounded aria-hidden="true" /><span>DEPOIS DO SERVIÇO</span></div>
+            <div data-reveal="right"><span className={styles.kicker}>EXPERIÊNCIAS QUE AJUDAM OUTRAS PESSOAS</span><h2>Concluiu o serviço? O cliente pode avaliar o profissional.</h2><p>A avaliação fica vinculada à solicitação concluída e pode aparecer no perfil público do profissional.</p></div>
           </div>
         </section>
 
@@ -467,8 +383,8 @@ export default function HomePage() {
           <div className={`${styles.container} ${styles.faqLayout}`}>
             <div className={styles.faqIntro} data-reveal="left">
               <span className={styles.kicker}>PERGUNTAS FREQUENTES</span>
-              <h2>Ficou com alguma dúvida?</h2>
-              <p>As regras são simples e estão aqui para todo mundo saber o que esperar.</p>
+              <h2>Antes de começar.</h2>
+              <p>Entenda o papel do ConectaPro e o que acontece em cada etapa.</p>
               <a className={styles.textLink} href="#topo">Voltar ao início <ArrowForwardRounded aria-hidden="true" /></a>
             </div>
             <div className={styles.faqList}>
@@ -482,15 +398,15 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className={styles.finalCta}>
+        <section className={styles.finalCta} id="contato">
           <div className={`${styles.container} ${styles.finalCtaInner}`} data-reveal="up">
             <span className={styles.finalSpark} aria-hidden="true">✳</span>
-            <span className={styles.finalKicker}>PRONTO PARA CONECTAR?</span>
-            <h2>O próximo bom serviço pode começar <em>aqui.</em></h2>
-            <p>Escolha o seu caminho e descubra uma forma mais simples de encontrar ou oferecer serviços locais.</p>
+            <span className={styles.finalKicker}>CONECTAPRO</span>
+            <h2>Seu próximo serviço pode começar com uma conversa.</h2>
+            <p>Conheça os caminhos para quem procura um profissional e para quem quer apresentar o próprio trabalho.</p>
             <div className={styles.finalActions}>
-              <ArrowLink href="#para-clientes">Quero contratar um profissional</ArrowLink>
-              <ArrowLink href="#para-profissionais" secondary>Quero receber oportunidades</ArrowLink>
+              <ArrowLink href="#para-clientes">Sou cliente</ArrowLink>
+              <ArrowLink href="#para-profissionais" secondary>Sou profissional</ArrowLink>
             </div>
           </div>
         </section>
@@ -498,9 +414,9 @@ export default function HomePage() {
 
       <footer className={styles.footer}>
         <div className={`${styles.container} ${styles.footerInner}`}>
-          <div><Link href="/" className={styles.brandLink}><Brand light /></Link><p>Encontre quem precisa do seu serviço.</p></div>
-          <div className={styles.footerLinks}><a href="#como-funciona">Como funciona</a><a href="#para-clientes">Clientes</a><a href="#para-profissionais">Profissionais</a><a href="#seguranca">Segurança</a><a href="#faq">FAQ</a><Link href="/termos-de-uso">Termos de uso</Link><Link href="/politica-de-privacidade">Privacidade</Link><Link href="/excluir-conta">Excluir conta</Link></div>
-          <div className={styles.footerAdmin}><Link href="https://painel.conectapro.celemora.com.br/login">Acesso administrativo <ArrowForwardRounded aria-hidden="true" /></Link><small>© {new Date().getFullYear()} ConectaPro</small></div>
+          <div className={styles.footerBrand}><Link href="/" className={styles.brandLink}><Brand light /></Link><p>Conectando clientes e profissionais locais.</p><a href="mailto:alejandrogomes23@hotmail.com">Fale com a equipe</a></div>
+          <nav className={styles.footerLinks} aria-label="Links do site"><a href="#como-funciona">Como funciona</a><a href="#para-clientes">Para clientes</a><a href="#para-profissionais">Para profissionais</a><a href="#faq">Dúvidas</a><Link href="/termos-de-uso">Termos de Uso</Link><Link href="/politica-de-privacidade">Privacidade</Link><Link href="/excluir-conta">Excluir conta</Link></nav>
+          <div className={styles.footerAdmin}><Link href="https://painel.conectapro.celemora.com.br/login">Acesso administrativo <ArrowForwardRounded aria-hidden="true" /></Link><small>© {new Date().getFullYear()} ConectaPro · Alejandro Digital Solutions</small></div>
         </div>
       </footer>
     </div>
