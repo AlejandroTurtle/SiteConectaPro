@@ -13,7 +13,7 @@ Para publicar: `npm run build` e `npm run start`.
 
 ## Rotas públicas
 
-- `/` — landing page
+- `/` — landing page.
 - `/termos-de-uso` — Termos de Uso
 - `/politica-de-privacidade` — Política de Privacidade
 - `/excluir-conta` — autenticação e solicitação de exclusão de conta e dados
