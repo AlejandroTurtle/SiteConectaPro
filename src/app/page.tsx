@@ -117,7 +117,14 @@ const questions = [
 function Brand({ light = false }: { light?: boolean }) {
   return (
     <span className={`${styles.brand} ${light ? styles.brandLight : ''}`}>
-      <span className={styles.brandMark} aria-hidden="true">c</span>
+      <Image
+        src="/conectapro-logo.svg"
+        alt=""
+        width={38}
+        height={38}
+        className={styles.brandLogo}
+        aria-hidden="true"
+      />
       <span>Conecta<span className={styles.brandEmphasis}>Pro</span></span>
     </span>
   );

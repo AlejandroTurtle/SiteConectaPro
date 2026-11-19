@@ -57,20 +57,7 @@
 .brandLink { display: inline-flex; align-items: center; flex-shrink: 0; }
 .brand { display: inline-flex; align-items: center; gap: 9px; color: var(--ink); font-size: 19px; font-weight: 800; letter-spacing: -.055em; }
 .brandLight { color: var(--cp-on-brand-surface); }
-.brandMark {
-  position: relative;
-  width: 35px;
-  height: 35px;
-  display: grid;
-  place-items: center;
-  padding-right: 3px;
-  border-radius: 12px;
-  background: var(--navy);
-  color: var(--cp-on-brand-surface);
-  font: italic 700 28px/1 Georgia, serif;
-  letter-spacing: -.1em;
-}
-.brandMark::after { position: absolute; right: 7px; bottom: 7px; width: 5px; height: 5px; border-radius: 50%; background: var(--gold); content: ""; }
+.brandLogo { display: block; width: 38px; height: 38px; object-fit: contain; }
 .brandEmphasis { color: var(--blue); }
 .brandLight .brandEmphasis { color: var(--gold); }
 .nav, .headerActions { display: flex; align-items: center; }
@@ -402,7 +389,7 @@
   .container { width: calc(100% - 32px); }
   .headerInner { width: calc(100% - 28px); }
   .brand { gap: 7px; font-size: 17px; }
-  .brandMark { width: 31px; height: 31px; font-size: 25px; }
+  .brandLogo { width: 32px; height: 32px; }
   .headerCta { min-height: 35px; padding-inline: 9px; font-size: 9px; }
   .heroCopy h1 { font-size: 42px; }
   .heroActions { align-items: stretch; flex-direction: column; }
